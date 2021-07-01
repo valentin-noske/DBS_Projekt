@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <p>Herzlich Willkommen!<p>
+</head>
+<body>
+<select name= country method="GET" action="/">
+    {% for country in countries %}
+    <option value= "{{country}}" SELECTED>{{country}}</option>"
+    {% endfor %}
+</select>
+<select name= indicator method="GET" action="/">
+    {% for indicator in indicators %}
+    <option value= "{{indicator}}" SELECTED>{{indicator}}</option>"
+    {% endfor %}
+</select>
+
+</select>
+</body>
+</html>
