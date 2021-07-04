@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dropdown</title>
-    <p>Herzlich Willkommen!<p>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>DBS_Project</title>
+    <p>Welcome! Please, select the country and the indicator for the plot!<p>
 </head>
 <body>
-<select name= country method="GET" action="/">
-    {% for country in countries %}
-    <option value= "{{country}}" SELECTED>{{country}}</option>"
-    {% endfor %}
-</select>
-<select name= indicator method="GET" action="/">
-    {% for indicator in indicators %}
-    <option value= "{{indicator}}" SELECTED>{{indicator}}</option>"
-    {% endfor %}
-</select>
-
-</select>
+<form method ="POST">
+    {{form.csrf_token}}
+    {{form.country}}
+    {{form.indicator}}
+    <input type="submit" value="SUBMIT">
+</form>
+<img src="static/test.png" alt="" width="500" height="400"></img>
 </body>
 </html>
